@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a FF para tirar dúvidas, pedir um orçamento ou conversar sobre seu próximo projeto digital.">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/paginas.css">
+    <title>Contato | FF</title>
+</head>
+<body>
+    <header id="topo" class="site-header">
+        <nav class="navbar" aria-label="Navegação principal">
+            <div class="logo" id="logo-principal"><a href="index.html" aria-label="FF — página inicial"><img src="./img/logo2.png" width="90" alt="Logo FF"></a></div>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal"><span></span><span></span><span></span></button>
+            <ul class="menu" id="menu-principal">
+                <li class="menu-item"><a href="index.html">Início</a></li>
+                <li class="menu-item"><a href="produto.html">Produtos</a></li>
+                <li class="menu-item"><a href="servicos.html">Serviços</a></li>
+                <li class="menu-item"><a href="contato.html" aria-current="page">Contato</a></li>
+                <li class="nav-button"><a href="contato.html">Fale conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="page-hero">
+            <div class="page-wrap page-hero-content">
+                <span class="eyebrow">Estamos por aqui</span>
+                <h1>Conte pra gente o que você precisa.</h1>
+                <p>Tem uma ideia, quer saber mais sobre um pacote ou precisa de ajuda com seu site atual? Escolha um canal de contato ou envie sua mensagem pelo formulário.</p>
+            </div>
+        </section>
+        <section class="page-section page-wrap" aria-label="Canais de contato e formulário">
+            <div class="contact-layout">
+                <aside class="contact-panel">
+                    <h2>Fale diretamente</h2>
+                    <p>Use o canal que for mais prático. Ao enviar uma mensagem, conte um pouco sobre o projeto e como podemos retornar.</p>
+                    <ul class="contact-list">
+                        <li class="contact-item"><strong>E-mail</strong><a href="mailto:contato@empresa.com">contato@empresa.com</a></li>
+                        <li class="contact-item"><strong>Telefone / WhatsApp</strong><a href="https://wa.me/5511999999999?text=Ol%C3%A1%21%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">(11) 99999-9999 — enviar mensagem</a></li>
+                        <li class="contact-item"><strong>Atendimento</strong><span>On-line, de segunda a sexta-feira</span></li>
+                    </ul>
+                    <p class="demo-notice"><strong>Antes de publicar:</strong> e-mail e telefone são dados de demonstração. Troque-os pelos canais oficiais da empresa e teste os links de e-mail, telefone e WhatsApp.</p>
+                </aside>
+                <section class="contact-panel" aria-labelledby="form-title">
+                    <h2 id="form-title">Envie sua mensagem</h2>
+                    <p>Preencha os campos. Seu aplicativo de e-mail será aberto com a mensagem pronta para enviar.</p>
+                    <form class="contact-form" id="contact-form">
+                        <label for="nome">Seu nome
+                            <input type="text" id="nome" name="nome" autocomplete="name" required maxlength="100" placeholder="Como podemos chamar você?">
+                        </label>
+                        <label for="email">Seu e-mail
+                            <input type="email" id="email" name="email" autocomplete="email" required maxlength="150" placeholder="voce@exemplo.com">
+                        </label>
+                        <label for="assunto">Assunto
+                            <select id="assunto" name="assunto" required>
+                                <option value="" disabled selected>Selecione um assunto</option>
+                                <option value="Produtos digitais">Produtos digitais</option>
+                                <option value="Criação de site">Criação de site</option>
+                                <option value="Manutenção de site">Manutenção de site</option>
+                                <option value="Outro assunto">Outro assunto</option>
+                            </select>
+                        </label>
+                        <label for="mensagem">Como podemos ajudar?
+                            <textarea id="mensagem" name="mensagem" required maxlength="2000" placeholder="Conte um pouco sobre sua ideia, necessidade ou prazo."></textarea>
+                        </label>
+                        <button class="submit-btn" type="submit">Preparar e-mail</button>
+                        <p class="form-note">Este formulário não envia dados a um servidor. Ele abre o aplicativo de e-mail configurado no seu dispositivo.</p>
+                    </form>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand"><img src="./img/logo2.png" alt="Logo FF"><p>Transformamos ideias em experiências digitais que conectam pessoas, negócios e resultados reais.</p></div>
+            <div class="footer-links"><h3>Navegação</h3><ul><li><a href="index.html">Início</a></li><li><a href="produto.html">Produtos</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="contato.html">Contato</a></li></ul></div>
+            <div class="footer-links"><h3>Contato</h3><ul class="footer-contact"><li><a href="mailto:contato@empresa.com">contato@empresa.com</a></li><li><a href="tel:+5511999999999">(11) 99999-9999</a></li><li><span>Atendimento on-line</span></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 FF. Todos os direitos reservados.</p></div>
+    </footer>
+    <script>
+        const header = document.querySelector('header');
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        function updateHeaderState() { header.classList.toggle('scrolled', window.scrollY > 20); }
+        menuToggle.addEventListener('click', () => {
+            const isOpen = menu.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+        menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+            menu.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }));
+        updateHeaderState();
+        window.addEventListener('scroll', updateHeaderState, { passive: true });
+
+        const contactForm = document.querySelector('#contact-form');
+        const assuntoParam = new URLSearchParams(window.location.search).get('assunto')?.slice(0, 100);
+        if (assuntoParam) {
+            const assuntoSelect = contactForm.elements.assunto;
+            const matchingOption = [...assuntoSelect.options].find((option) => option.value.toLowerCase() === assuntoParam.toLowerCase());
+            if (matchingOption) {
+                assuntoSelect.value = matchingOption.value;
+            } else {
+                assuntoSelect.add(new Option(assuntoParam, assuntoParam, true, true), 1);
+            }
+        }
+        contactForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            if (!contactForm.reportValidity()) return;
+            const data = new FormData(contactForm);
+            const subject = `[FF] ${data.get('assunto')}`;
+            const body = `Nome: ${data.get('nome')}\nE-mail: ${data.get('email')}\n\nMensagem:\n${data.get('mensagem')}`;
+            window.location.href = `mailto:contato@empresa.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        });
+    </script>
+</body>
+</html>
