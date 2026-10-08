@@ -1,99 +1,154 @@
-<!DOCTYPE html>
-<html lang="pt br">
+<!DOCTYPE html> <!-- Declara que o documento é HTML5 -->
 
-<head>
-    <meta charset="UTF-8">
+<html lang="pt-BR"> <!-- Inicia a página e define a língua portuguesa do Brasil -->
+
+<head> <!-- Área que guarda configurações da página -->
+    <meta charset="UTF-8"> <!-- Permite acentos e caracteres especiais -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz a página se adaptar ao tamanho da tela do celular -->
+    
     <link rel="stylesheet" href="css/estilo.css">
-    <title>FF</title>
+    <!-- Conecta o arquivo CSS que deixa o site com estilo -->
+    
+    <title>FF</title> <!-- Título que aparece na aba do navegador -->
+</head> <!-- Fecha a área de configuração -->
 
-</head>
+<body> <!-- Começa o conteúdo visível da página -->
 
-<body>
-    <header id="topo" class="site-header">
-        <nav class="navbar" aria-label="Navegação principal">
-            <div class="logo" id="logo-principal">
+    <header id="topo" class="site-header"> <!-- Cabeçalho do site -->
+        <nav class="navbar" aria-label="Navegação principal"> <!-- Menu de navegação -->
+            <div class="logo" id="logo-principal"> <!-- Bloco do logo -->
                 <img src="./img/logo2.png" width="90" alt="Logo do site">
+                <!-- Exibe a imagem do logo -->
             </div>
 
             <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+                <!-- Botão do menu mobile -->
+                <span></span> <!-- Linha 1 do ícone do menu -->
+                <span></span> <!-- Linha 2 do ícone do menu -->
+                <span></span> <!-- Linha 3 do ícone do menu -->
             </button>
 
-            <ul class="menu" id="menu-principal">
-                <li class="menu-item"><a href="index.html">Início</a></li>
-                <li class="menu-item"><a href="produto.html">Produto</a></li>
-                <li class="menu-item"><a href="servicos.html">Serviços</a></li>
-                <li class="menu-item"><a href="contato.html">Contato</a></li>
+            <ul class="menu" id="menu-principal"> <!-- Lista de links do menu -->
+                <li class="menu-item"><a href="index.html">Início</a></li> <!-- Link para a página inicial -->
+                <li class="menu-item"><a href="produto.html">Produto</a></li> <!-- Link para a página de produtos -->
+                <li class="menu-item"><a href="contato.html">Contato</a></li> <!-- Link para a página de contato -->
                 <li class="nav-button"><button type="button">Entrar</button></li>
+                <!-- Botão de acesso -->
             </ul>
         </nav>
     </header>
 
-    <main id="conteudo-principal">
-        <section class="hero" id="secao-hero">
+    <main id="conteudo-principal"> <!-- Conteúdo principal da página -->
+        <section class="hero" id="secao-hero"> <!-- Seção de destaque/banner -->
             <img class="hero-image" src="./img/ChatGPT Image 23 de set. de 2026, 15_24_44.png" alt="Imagem principal">
+            <!-- Imagem principal da seção hero -->
 
-            <div class="hero-content" id="hero-conteudo">
-                <h1>Bem vindo ao nosso site</h1>
-                <p>Vem fazer parte dessa família</p>
-                <button type="button">Saiba Mais</button>
+            <div class="hero-content" id="hero-conteudo"> <!-- Conteúdo textual do banner -->
+                <h1>Bem vindo ao nosso site</h1> <!-- Título principal -->
+                <p>Vem fazer parte dessa família</p> <!-- Texto de apoio -->
+                <button type="button">Saiba Mais</button> <!-- Botão de chamada -->
             </div>
         </section>
 
-        
-
-    <footer class="site-footer">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <img src="./img/logo2.png" alt="Logo do site">
-                <p>Transformamos ideias em experiências digitais que conectam pessoas, negócios e resultados reais.</p>
+        <section class="home-cards" aria-labelledby="home-cards-title"> <!-- Seção de cards -->
+            <div class="home-cards-heading"> <!-- Cabeçalho da seção -->
+                <p>Conteúdos em destaque</p> <!-- Texto pequeno -->
+                <h2 id="home-cards-title">Confira as imagens e informações</h2>
+                <!-- Título da seção -->
             </div>
 
-            <div class="footer-links">
+            <div class="home-card-grid"> <!-- Container dos cards -->
+                <article class="home-card"> <!-- Primeiro card -->
+                    <img src="./img/xit.jpg" alt="Imagem sobre sensibilidade XIT para Free Fire" loading="lazy">
+                    <!-- Imagem do card -->
+                    <div class="home-card-content"> <!-- Conteúdo do card -->
+                        <span class="home-card-tag">Free Fire</span> <!-- Tag do item -->
+                        <h3>Sensibilidade XIT</h3> <!-- Nome do produto -->
+                        <p>Veja as informações relacionadas a esta configuração de sensibilidade.</p>
+                        <!-- Descrição -->
+                        <a href="produto.html">Ver informações</a> <!-- Link para mais detalhes -->
+                    </div>
+                </article>
+
+                <article class="home-card"> <!-- Segundo card -->
+                    <img src="./img/xit1jpg.jpg" alt="Imagem sobre XIT VIP para Free Fire Mobile" loading="lazy">
+                    <div class="home-card-content">
+                        <span class="home-card-tag">Mobile</span>
+                        <h3>Versão VIP para Mobile</h3>
+                        <p>Confira os detalhes apresentados para a versão destinada a dispositivos móveis.</p>
+                        <a href="produto.html">Ver informações</a>
+                    </div>
+                </article>
+
+                <article class="home-card"> <!-- Terceiro card -->
+                    <img src="./img/xit2.jpg" alt="Imagem sobre sensibilidade XIT para A01 Core" loading="lazy">
+                    <div class="home-card-content">
+                        <span class="home-card-tag">A01 Core</span>
+                        <h3>Conteúdo para A01 Core</h3>
+                        <p>Consulte as informações disponíveis sobre esta configuração e sua compatibilidade.</p>
+                        <a href="produto.html">Ver informações</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"> <!-- Rodapé da página -->
+        <div class="footer-grid"> <!-- Grid do rodapé -->
+            <div class="footer-brand"> <!-- Logo e descrição -->
+                <img src="./img/logo2.png" alt="Logo do site">
+                <p>Desenvolvemos uma experiência focada em praticidade e organização para jogadores de Free Fire. Apresentamos os recursos e planos de forma clara, com informações atualizadas e suporte conforme as condições de cada serviço, buscando oferecer uma experiência simples e profissional aos usuários.
+</p>
+            </div>
+
+            <div class="footer-links"> <!-- Bloco de navegação -->
                 <h3>Navegação</h3>
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="produto.html">Produto</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </div>
 
-            <div class="footer-links">
+            <div class="footer-links"> <!-- Bloco de contato -->
                 <h3>Contato</h3>
                 <ul class="footer-contact">
-                    <li><a href="mailto:contato@empresa.com">contato@empresa.com</a></li>
-                    <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
-                    <li><span>São Paulo - SP</span></li>
+                    <li><a href="mailto:atendimento@ffdigital.com.br">atendimento@ffdigital.com.br</a></li>
+                    <!-- E-mail -->
+                    <li><a href="tel:+5511987654321">(11) 98765-4321</a></li>
+                    <!-- Telefone -->
+                    <li><span>São Paulo - SP</span></li> <!-- Localização -->
                 </ul>
             </div>
         </div>
 
-        <div class="footer-bottom">
-            <p>© 2026 FF. Todos os direitos reservados.</p>
+        <div class="footer-bottom"> <!-- Parte final do rodapé -->
+            <p>© 2026 FF. Todos os direitos reservados.</p> <!-- Texto de copyright -->
         </div>
     </footer>
 
-    <script>
-        const header = document.querySelector('header');
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('.menu');
+    <script> <!-- Inicia JavaScript -->
+        const header = document.querySelector('header'); <!-- Pega o cabeçalho -->
+        const menuToggle = document.querySelector('.menu-toggle'); <!-- Pega botão do menu -->
+        const menu = document.querySelector('.menu'); <!-- Pega o menu -->
 
         function updateHeaderState() {
             header.classList.toggle('scrolled', window.scrollY > 20);
+            // Adiciona ou remove a classe 'scrolled' quando a página rola
         }
 
         menuToggle.addEventListener('click', () => {
             const isOpen = menu.classList.toggle('open');
             menuToggle.setAttribute('aria-expanded', String(isOpen));
+            // Abre/fecha o menu e atualiza o atributo para acessibilidade
         });
 
         updateHeaderState();
         window.addEventListener('scroll', updateHeaderState, { passive: true });
+        // Atualiza o cabeçalho quando a página é rolada
     </script>
-</body>
 
-</html>
+</body> <!-- Fecha o conteúdo da página -->
+
+</html> <!-- Fecha a estrutura do documento -->

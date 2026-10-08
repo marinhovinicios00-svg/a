@@ -1,110 +1,162 @@
+<!-- Informa ao navegador que este documento usa HTML5. -->
 <!DOCTYPE html>
+<!-- <html> envolve todo o documento; lang indica que o conteúdo está em português do Brasil. -->
 <html lang="pt-BR">
 <head>
+    <!-- <meta charset> define a codificação e permite exibir corretamente acentos e caracteres especiais. -->
     <meta charset="UTF-8">
+    <!-- Faz a página adaptar sua largura à tela do celular ou computador. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conheça os pacotes de sites e soluções digitais da FF, com escopo, recursos e valores de referência.">
+    <!-- Descrição resumida usada por mecanismos de busca e prévias da página. -->
+    <meta name="description" content="Conheça os planos Básico, Premium e VIP de XIT para Free Fire, seus recursos e as informações importantes antes de contratar.">
+    <!-- <link rel="stylesheet"> carrega um arquivo CSS externo; href indica o caminho do arquivo. -->
     <link rel="stylesheet" href="css/estilo.css">
+    <!-- Carrega estilos complementares específicos das páginas internas. -->
     <link rel="stylesheet" href="css/paginas.css">
-    <title>Produtos digitais | FF</title>
+    <!-- <title> define o texto da aba do navegador. -->
+    <title>Planos XIT para Free Fire | FF</title>
 </head>
 <body>
+    <!-- <body> contém tudo que será exibido na página. <header> é o cabeçalho do site. -->
     <header id="topo" class="site-header">
+        <!-- <nav> identifica uma área de navegação; aria-label dá nome acessível a leitores de tela. -->
         <nav class="navbar" aria-label="Navegação principal">
+            <!-- <div> agrupa elementos. <a> cria um link e <img> mostra a imagem do logo. -->
             <div class="logo" id="logo-principal"><a href="index.html" aria-label="FF — página inicial"><img src="./img/logo2.png" width="90" alt="Logo FF"></a></div>
+            <!-- <button> cria um botão. type="button" evita envio de formulário; aria-* informa estado e controle para acessibilidade. -->
             <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal"><span></span><span></span><span></span></button>
+            <!-- <ul> cria uma lista não ordenada; cada <li> é um item. O id conecta a lista ao botão do menu. -->
             <ul class="menu" id="menu-principal">
+                <!-- <a href> leva a outra página; class permite aplicar estilos CSS. -->
                 <li class="menu-item"><a href="index.html">Início</a></li>
+                <!-- aria-current="page" indica que este link corresponde à página aberta. -->
                 <li class="menu-item"><a href="produto.html" aria-current="page">Produtos</a></li>
-                <li class="menu-item"><a href="servicos.html">Serviços</a></li>
                 <li class="menu-item"><a href="contato.html">Contato</a></li>
+                <!-- Este item recebe uma classe própria para ter aparência de botão via CSS. -->
                 <li class="nav-button"><a href="contato.html">Fale conosco</a></li>
             </ul>
         </nav>
     </header>
+    <!-- <main> reúne o conteúdo principal e único desta página. -->
     <main>
+        <!-- <section> representa uma seção temática; esta é a apresentação principal (hero). -->
         <section class="page-hero">
+            <!-- Contêiner que centraliza e limita a largura do conteúdo por meio do CSS. -->
             <div class="page-wrap page-hero-content">
-                <span class="eyebrow">Soluções digitais FF</span>
-                <h1>Um site sob medida para o próximo passo do seu negócio.</h1>
-                <p>Escolha um ponto de partida: páginas rápidas para apresentar uma campanha, um site institucional completo ou uma vitrine digital para mostrar seus produtos. Cada projeto é adaptado ao seu conteúdo e aos seus objetivos.</p>
-                <a class="hero-cta" href="contato.html?assunto=Quero%20conhecer%20os%20produtos">Conversar sobre um projeto</a>
+                <!-- <span> destaca um pequeno rótulo sem iniciar um novo parágrafo. -->
+                <span class="eyebrow">Produto FF • Free Fire</span>
+                <!-- <h1> é o título principal da página; normalmente deve haver um por página. -->
+                <h1>Conheça os planos de XIT para Free Fire.</h1>
+                <!-- <p> representa um parágrafo de texto. -->
+                <p>Compare as opções Básico, Premium e VIP, com seus respectivos períodos, recursos informados e canais de suporte. Antes de contratar, confira a compatibilidade e considere que ferramentas de terceiros não autorizadas podem violar as regras do jogo e resultar em punições à conta.</p>
+                <!-- Link estilizado como chamada para ação; o texto após ?assunto= é enviado na URL. -->
+                <a class="hero-cta" href="contato.html?assunto=Informações%20sobre%20planos%20XIT">Consultar informações</a>
             </div>
         </section>
+        <!-- Seção de apresentação dos planos; aria-labelledby associa a seção ao título indicado pelo id. -->
         <section class="page-section page-wrap" aria-labelledby="produtos-titulo">
+            <!-- Agrupa título e texto introdutório da lista de planos. -->
             <div class="section-heading">
-                <h2 id="produtos-titulo">Pacotes para diferentes momentos</h2>
-                <p>Os valores abaixo são estimativas iniciais de demonstração. O orçamento final depende de escopo, conteúdo, integrações e necessidades específicas.</p>
+                <!-- <h2> é um título de segundo nível, subordinado ao h1. -->
+                <h2 id="produtos-titulo">Escolha o plano que deseja conhecer</h2>
+                <p>Veja a duração e os itens descritos para cada opção. Confirme disponibilidade, compatibilidade, condições e preço atual diretamente com a equipe antes de qualquer contratação.</p>
             </div>
+            <!-- Grade que reúne os cartões; a disposição visual é definida pela classe no CSS. -->
             <div class="offer-grid">
+                <!-- <article> é um conteúdo independente; aqui, cada article representa um plano. -->
                 <article class="offer-card">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=85" alt="Painel digital com gráficos e métricas em uma tela" loading="lazy">
+                    <!-- <img> exibe uma imagem; src é o caminho, alt descreve a imagem e loading="lazy" adia o carregamento. -->
+                    <img src="./img/maxresdefault.jpg" alt="Imagem promocional do plano Básico de Free Fire" loading="lazy">
+                    <!-- Agrupa o texto e os detalhes do cartão. -->
                     <div class="offer-body">
-                        <span class="offer-tag">Para começar</span>
-                        <h3>Landing page</h3>
-                        <p>Uma página objetiva para apresentar uma oferta, captar contatos e direcionar o visitante para a ação mais importante do seu negócio.</p>
-                        <div class="offer-price">A partir de R$ 890 <small>/ projeto</small></div>
-                        <ul class="offer-list"><li>Layout responsivo para celular e computador</li><li>Até 5 seções de conteúdo</li><li>Botões para WhatsApp e redes sociais</li><li>Formulário de interesse e configuração básica de SEO</li></ul>
-                        <a class="card-link" href="contato.html?assunto=Orçamento%20de%20landing%20page">Solicitar orçamento</a>
+                        <!-- Etiqueta curta para classificar o plano. -->
+                        <span class="offer-tag">Plano de entrada</span>
+                        <!-- Título do cartão, em nível h3 abaixo do título da seção h2. -->
+                        <h3>Plano Básico</h3>
+                        <p>Opção mensal de entrada, apresentada com acesso ao pacote básico, interface organizada e suporte relacionado ao serviço.</p>
+                        <!-- <div> agrupa a apresentação do preço; <small> marca o texto secundário (/ mês). -->
+                        <div class="offer-price">R$ 39,90 <small>/ mês</small></div>
+                        <!-- Lista de características; cada <li> representa uma característica. -->
+                        <ul class="offer-list"><li>Acesso ao pacote básico</li><li>Interface simples e organizada</li><li>Atualizações incluídas, conforme disponibilidade</li><li>Suporte relacionado ao serviço</li></ul>
+                        <!-- Link para contato com o assunto do plano preenchido na query string da URL. -->
+                        <a class="card-link" href="contato.html?assunto=Informações%20sobre%20o%20plano%20Básico">Consultar plano</a>
                     </div>
                 </article>
+                <!-- Segundo article: cartão do plano Premium, com a mesma estrutura do cartão anterior. -->
                 <article class="offer-card">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=85" alt="Profissional desenvolvendo um site em um notebook" loading="lazy">
+                    <img src="./img/fff.jpg" alt="Imagem promocional do plano Premium de Free Fire" loading="lazy">
                     <div class="offer-body">
-                        <span class="offer-tag">Mais completo</span>
-                        <h3>Site institucional</h3>
-                        <p>Uma presença digital organizada para contar a história da empresa, explicar os serviços e facilitar o contato com clientes.</p>
-                        <div class="offer-price">A partir de R$ 1.990 <small>/ projeto</small></div>
-                        <ul class="offer-list"><li>Até 5 páginas institucionais</li><li>Design responsivo e navegação acessível</li><li>Áreas para equipe, serviços e dúvidas frequentes</li><li>SEO inicial e links para canais de atendimento</li></ul>
-                        <a class="card-link" href="contato.html?assunto=Orçamento%20de%20site%20institucional">Solicitar orçamento</a>
+                        <span class="offer-tag">Mais recursos</span>
+                        <h3>Plano Premium</h3>
+                        <p>Opção mensal com acesso ao pacote completo descrito pelo fornecedor e suporte prioritário para dúvidas sobre o serviço.</p>
+                        <div class="offer-price">R$ 69,90 <small>/ mês</small></div>
+                        <ul class="offer-list"><li>Acesso ao pacote Premium</li><li>Recursos adicionais, conforme a versão disponível</li><li>Atualizações informadas pelo fornecedor</li><li>Suporte prioritário relacionado ao serviço</li></ul>
+                        <a class="card-link" href="contato.html?assunto=Informações%20sobre%20o%20plano%20Premium">Consultar plano</a>
                     </div>
                 </article>
+                <!-- Terceiro article: cartão do plano VIP, também reaproveitando as mesmas classes e estrutura. -->
                 <article class="offer-card">
-                    <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1000&q=85" alt="Estudo de identidade visual e materiais para uma marca" loading="lazy">
+                    <img src="./img/maxresdefault (1).jpg" alt="Imagem promocional do plano VIP de Free Fire" loading="lazy">
                     <div class="offer-body">
-                        <span class="offer-tag">Para vender on-line</span>
-                        <h3>Vitrine digital</h3>
-                        <p>Catálogo visual para apresentar produtos e receber pedidos pelo canal de atendimento que sua equipe já utiliza.</p>
-                        <div class="offer-price">A partir de R$ 2.490 <small>/ projeto</small></div>
-                        <ul class="offer-list"><li>Catálogo inicial de até 20 itens</li><li>Filtros e categorias para facilitar a busca</li><li>Botões de pedido via WhatsApp</li><li>Orientação para atualizar textos e imagens</li></ul>
-                        <a class="card-link" href="contato.html?assunto=Orçamento%20de%20vitrine%20digital">Solicitar orçamento</a>
+                        <span class="offer-tag">Plano completo</span>
+                        <h3>Plano VIP</h3>
+                        <p>Opção mensal descrita como acesso ao pacote VIP, com atualizações prioritárias e atendimento exclusivo, conforme as condições do fornecedor.</p>
+                        <div class="offer-price">R$ 99,90 <small>/ mês</small></div>
+                        <ul class="offer-list"><li>Acesso ao pacote VIP</li><li>Recursos descritos para o plano</li><li>Atualizações prioritárias, quando disponíveis</li><li>Suporte exclusivo relacionado ao serviço</li></ul>
+                        <a class="card-link" href="contato.html?assunto=Informações%20sobre%20o%20plano%20VIP">Consultar plano</a>
                     </div>
                 </article>
             </div>
-            <p class="price-note"><strong>Transparência:</strong> estes preços são referências fictícias para apresentação do site, não constituem proposta comercial e devem ser confirmados e atualizados antes da publicação. Hospedagem, domínio, produção de conteúdo e integrações podem ser orçados à parte.</p>
-            <div class="benefit-row" aria-label="O que todos os projetos incluem">
-                <div class="benefit"><strong>Feito para todas as telas</strong>Layouts adaptáveis para celular, tablet e computador.</div>
-                <div class="benefit"><strong>Projeto acompanhado</strong>Alinhamento de escopo e revisões combinadas antes da entrega.</div>
-                <div class="benefit"><strong>Próximo passo claro</strong>Orientação para publicar o site e manter seus dados atualizados.</div>
+            <!-- Aviso em parágrafo; <strong> destaca visualmente e semanticamente o início do texto. -->
+            <p class="price-note"><strong>Aviso importante:</strong> o XIT é descrito como software de terceiros que modifica ou acrescenta recursos à experiência do Free Fire. O funcionamento, os recursos e a compatibilidade podem variar conforme a versão. O uso de ferramentas não autorizadas pode violar as regras do jogo e resultar em punições ou banimento da conta. Os valores e condições são informados pelo fornecedor e devem ser confirmados antes de qualquer contratação.</p>
+            <!-- Grupo de informações em três blocos; aria-label descreve o propósito para tecnologias assistivas. -->
+            <div class="benefit-row" aria-label="Informações antes de escolher um plano">
+                <!-- Cada <div> é um bloco de benefício; <strong> dá destaque ao título do bloco. -->
+                <div class="benefit"><strong>1. Compare os planos</strong>Confira os recursos anunciados, a duração do acesso e as condições de cada opção.</div>
+                <div class="benefit"><strong>2. Confirme compatibilidade</strong>Verifique com o fornecedor as versões e os dispositivos compatíveis antes de decidir.</div>
+                <div class="benefit"><strong>3. Considere os riscos</strong>Ferramentas de terceiros podem contrariar as regras do jogo. Prefira sempre recursos oficiais para proteger sua conta.</div>
             </div>
         </section>
+        <!-- Seção final de chamada para ação, com outro convite para entrar em contato. -->
         <section class="page-cta page-wrap">
-            <h2>Precisa de outra solução?</h2>
-            <p>Conte seu objetivo. A gente conversa sobre o formato que faz sentido.</p>
-            <a class="hero-cta" href="contato.html">Falar com a equipe</a>
+            <h2>Quer esclarecer alguma informação?</h2>
+            <p>Entre em contato para confirmar planos, disponibilidade e condições atualizadas.</p>
+            <a class="hero-cta" href="contato.html?assunto=Informações%20sobre%20planos%20XIT">Falar com a equipe</a>
         </section>
     </main>
+    <!-- <footer> é o rodapé do site; geralmente reúne marca, links e informações de contato. -->
     <footer class="site-footer">
+        <!-- Grade que organiza as colunas do rodapé visualmente via CSS. -->
         <div class="footer-grid">
+            <!-- Coluna da marca, com imagem do logo e um parágrafo descritivo. -->
             <div class="footer-brand"><img src="./img/logo2.png" alt="Logo FF"><p>Transformamos ideias em experiências digitais que conectam pessoas, negócios e resultados reais.</p></div>
-            <div class="footer-links"><h3>Navegação</h3><ul><li><a href="index.html">Início</a></li><li><a href="produto.html">Produtos</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="contato.html">Contato</a></li></ul></div>
-            <div class="footer-links"><h3>Contato</h3><ul class="footer-contact"><li><a href="mailto:contato@empresa.com">contato@empresa.com</a></li><li><a href="tel:+5511999999999">(11) 99999-9999</a></li><li><span>Atendimento on-line</span></li></ul></div>
+            <!-- Coluna de navegação; h3 é um título e ul/li organiza os links em lista. -->
+            <div class="footer-links"><h3>Navegação</h3><ul><li><a href="index.html">Início</a></li><li><a href="produto.html">Produtos</a></li><li><a href="contato.html">Contato</a></li></ul></div>
+            <!-- Coluna de contato: mailto: abre o aplicativo de e-mail e tel: inicia uma ligação em dispositivos compatíveis. -->
+            <div class="footer-links"><h3>Contato</h3><ul class="footer-contact"><li><a href="mailto:atendimento@ffdigital.com.br">atendimento@ffdigital.com.br</a></li><li><a href="tel:+5511987654321">(11) 98765-4321</a></li><li><span>Atendimento on-line</span></li></ul></div>
         </div>
+        <!-- Faixa inferior do rodapé, usada aqui para exibir os direitos autorais. -->
         <div class="footer-bottom"><p>© 2026 FF. Todos os direitos reservados.</p></div>
     </footer>
+    <!-- <script> contém JavaScript, que adiciona comportamento interativo ao menu e ao cabeçalho. -->
     <script>
+        // Busca o cabeçalho, o botão de menu e a lista de links no documento.
         const header = document.querySelector('header');
         const menuToggle = document.querySelector('.menu-toggle');
         const menu = document.querySelector('.menu');
+        // Atualiza a classe do cabeçalho quando a página rola mais de 20 pixels.
         function updateHeaderState() { header.classList.toggle('scrolled', window.scrollY > 20); }
+        // Ao clicar no botão, abre/fecha o menu e atualiza o estado acessível aria-expanded.
         menuToggle.addEventListener('click', () => {
             const isOpen = menu.classList.toggle('open');
             menuToggle.setAttribute('aria-expanded', String(isOpen));
         });
+        // Ao escolher um link do menu, fecha o menu e atualiza aria-expanded para "false".
         menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
             menu.classList.remove('open');
             menuToggle.setAttribute('aria-expanded', 'false');
         }));
+        // Define a aparência correta logo ao carregar e acompanha a rolagem da janela.
         updateHeaderState();
         window.addEventListener('scroll', updateHeaderState, { passive: true });
     </script>

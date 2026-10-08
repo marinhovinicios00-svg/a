@@ -1,59 +1,97 @@
+<!-- Informa ao navegador que este documento usa HTML5. -->
 <!DOCTYPE html>
+<!-- <html> envolve todo o documento; lang informa que o conteúdo está em português do Brasil. -->
 <html lang="pt-BR">
 <head>
+    <!-- Define a codificação para que acentos e caracteres especiais sejam exibidos corretamente. -->
     <meta charset="UTF-8">
+    <!-- Ajusta a largura da página à tela do celular, tablet ou computador. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Descrição da página usada por mecanismos de busca e prévias. -->
     <meta name="description" content="Entre em contato com a FF para tirar dúvidas, pedir um orçamento ou conversar sobre seu próximo projeto digital.">
+    <!-- <link rel="stylesheet"> conecta a página a um arquivo CSS; href indica o caminho. -->
     <link rel="stylesheet" href="css/estilo.css">
+    <!-- Folha de estilos complementar para as páginas internas. -->
     <link rel="stylesheet" href="css/paginas.css">
+    <!-- Texto que aparece na aba do navegador. -->
     <title>Contato | FF</title>
 </head>
 <body>
+    <!-- <body> contém o conteúdo visível; <header> é o cabeçalho do site. -->
     <header id="topo" class="site-header">
+        <!-- <nav> marca a navegação principal; aria-label dá um nome acessível a leitores de tela. -->
         <nav class="navbar" aria-label="Navegação principal">
+            <!-- <div> agrupa o logo; <a href> torna a imagem um link para a página inicial; <img> exibe a imagem. -->
             <div class="logo" id="logo-principal"><a href="index.html" aria-label="FF — página inicial"><img src="./img/logo2.png" width="90" alt="Logo FF"></a></div>
+            <!-- Botão que abre/fecha o menu; aria-expanded comunica seu estado e aria-controls identifica o menu controlado. -->
             <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal"><span></span><span></span><span></span></button>
+            <!-- <ul> cria uma lista não ordenada; cada <li> é um item de navegação. -->
             <ul class="menu" id="menu-principal">
+                <!-- <a href> cria links para outras páginas do site. -->
                 <li class="menu-item"><a href="index.html">Início</a></li>
                 <li class="menu-item"><a href="produto.html">Produtos</a></li>
-                <li class="menu-item"><a href="servicos.html">Serviços</a></li>
+                <!-- aria-current="page" indica que este link representa a página atual. -->
                 <li class="menu-item"><a href="contato.html" aria-current="page">Contato</a></li>
                 <li class="nav-button"><a href="contato.html">Fale conosco</a></li>
             </ul>
         </nav>
     </header>
+    <!-- <main> agrupa o conteúdo principal da página. -->
     <main>
+        <!-- Seção de apresentação da página (hero). -->
         <section class="page-hero">
+            <!-- Contêiner usado pelo CSS para alinhar e limitar a largura do conteúdo. -->
             <div class="page-wrap page-hero-content">
+                <!-- <span> destaca um rótulo curto sem criar outro parágrafo. -->
                 <span class="eyebrow">Estamos por aqui</span>
+                <!-- <h1> é o título principal da página. -->
                 <h1>Conte pra gente o que você precisa.</h1>
-                <p>Tem uma ideia, quer saber mais sobre um pacote ou precisa de ajuda com seu site atual? Escolha um canal de contato ou envie sua mensagem pelo formulário.</p>
+                <!-- <p> representa um parágrafo de texto. -->
+                <p>Ficou com alguma dúvida ou quer saber mais sobre nossos pacotes? Estamos prontos para ajudar. Escolha o canal de contato que preferir ou envie uma mensagem pelo formulário e fale com nossa equipe para receber mais informações sobre o serviço.
+</p>
             </div>
         </section>
+        <!-- Seção dos canais de contato e do formulário; aria-label fornece um nome acessível. -->
         <section class="page-section page-wrap" aria-label="Canais de contato e formulário">
+            <!-- Contêiner para organizar o painel de contatos e o formulário lado a lado. -->
             <div class="contact-layout">
+                <!-- <aside> contém informação complementar à página: neste caso, os canais de contato. -->
                 <aside class="contact-panel">
+                    <!-- <h2> é um título de segundo nível, subordinado ao h1. -->
                     <h2>Fale diretamente</h2>
-                    <p>Use o canal que for mais prático. Ao enviar uma mensagem, conte um pouco sobre o projeto e como podemos retornar.</p>
+                    <p>Escolha o canal de contato que for mais conveniente para você. Ao enviar sua mensagem, conte brevemente o que procura e deixe uma forma de retorno. Assim, nossa equipe poderá entender melhor sua necessidade e entrar em contato com você.
+</p>
+                    <!-- Lista dos meios de contato; <li> representa cada item da lista. -->
                     <ul class="contact-list">
-                        <li class="contact-item"><strong>E-mail</strong><a href="mailto:contato@empresa.com">contato@empresa.com</a></li>
-                        <li class="contact-item"><strong>Telefone / WhatsApp</strong><a href="https://wa.me/5511999999999?text=Ol%C3%A1%21%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">(11) 99999-9999 — enviar mensagem</a></li>
+                        <!-- <strong> destaca o nome do canal; mailto: abre um aplicativo de e-mail. -->
+                        <li class="contact-item"><strong>E-mail</strong><a href="mailto:atendimento@ffdigital.com.br">atendimento@ffdigital.com.br</a></li>
+                        <!-- wa.me abre o WhatsApp; target abre nova aba e rel="noopener noreferrer" melhora a segurança. -->
+                        <li class="contact-item"><strong>Telefone / WhatsApp</strong><a href="https://wa.me/5511965262572?text=Ol%C3%A1%21%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">(11) 98765-4321 — enviar mensagem</a></li>
+                        <!-- <span> marca um trecho de texto sem criar um novo bloco. -->
                         <li class="contact-item"><strong>Atendimento</strong><span>On-line, de segunda a sexta-feira</span></li>
                     </ul>
+                    <!-- Aviso em parágrafo; <strong> destaca o começo do aviso. -->
                     <p class="demo-notice"><strong>Antes de publicar:</strong> e-mail e telefone são dados de demonstração. Troque-os pelos canais oficiais da empresa e teste os links de e-mail, telefone e WhatsApp.</p>
                 </aside>
+                <!-- Segundo painel. aria-labelledby associa esta seção ao título com id="form-title". -->
                 <section class="contact-panel" aria-labelledby="form-title">
                     <h2 id="form-title">Envie sua mensagem</h2>
                     <p>Preencha os campos. Seu aplicativo de e-mail será aberto com a mensagem pronta para enviar.</p>
+                    <!-- <form> agrupa campos de entrada; id permite encontrá-lo no JavaScript. -->
                     <form class="contact-form" id="contact-form">
+                        <!-- <label> descreve o campo associado. for deve corresponder ao id do input. -->
                         <label for="nome">Seu nome
+                            <!-- Campo de texto. name identifica o valor no formulário; required obriga o preenchimento. -->
                             <input type="text" id="nome" name="nome" autocomplete="name" required maxlength="100" placeholder="Como podemos chamar você?">
                         </label>
                         <label for="email">Seu e-mail
+                            <!-- Campo de e-mail; o navegador verifica o formato. maxlength limita o tamanho digitado. -->
                             <input type="email" id="email" name="email" autocomplete="email" required maxlength="150" placeholder="voce@exemplo.com">
                         </label>
                         <label for="assunto">Assunto
+                            <!-- <select> cria um menu de opções. -->
                             <select id="assunto" name="assunto" required>
+                                <!-- <option> representa uma opção; disabled impede selecionar o texto inicial como resposta válida. -->
                                 <option value="" disabled selected>Selecione um assunto</option>
                                 <option value="Produtos digitais">Produtos digitais</option>
                                 <option value="Criação de site">Criação de site</option>
@@ -62,28 +100,41 @@
                             </select>
                         </label>
                         <label for="mensagem">Como podemos ajudar?
+                            <!-- <textarea> permite digitar uma mensagem com várias linhas. -->
                             <textarea id="mensagem" name="mensagem" required maxlength="2000" placeholder="Conte um pouco sobre sua ideia, necessidade ou prazo."></textarea>
                         </label>
+                        <!-- Envia o formulário para o tratamento JavaScript abaixo; o texto indica a ação. -->
                         <button class="submit-btn" type="submit">Preparar e-mail</button>
+                        <!-- Nota que explica ao visitante como os dados do formulário serão usados. -->
                         <p class="form-note">Este formulário não envia dados a um servidor. Ele abre o aplicativo de e-mail configurado no seu dispositivo.</p>
                     </form>
                 </section>
             </div>
         </section>
     </main>
+    <!-- <footer> é o rodapé e pode reunir marca, navegação e dados de contato. -->
     <footer class="site-footer">
+        <!-- Contêiner em grade para organizar as colunas do rodapé via CSS. -->
         <div class="footer-grid">
+            <!-- Bloco com logo e texto institucional. -->
             <div class="footer-brand"><img src="./img/logo2.png" alt="Logo FF"><p>Transformamos ideias em experiências digitais que conectam pessoas, negócios e resultados reais.</p></div>
-            <div class="footer-links"><h3>Navegação</h3><ul><li><a href="index.html">Início</a></li><li><a href="produto.html">Produtos</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="contato.html">Contato</a></li></ul></div>
-            <div class="footer-links"><h3>Contato</h3><ul class="footer-contact"><li><a href="mailto:contato@empresa.com">contato@empresa.com</a></li><li><a href="tel:+5511999999999">(11) 99999-9999</a></li><li><span>Atendimento on-line</span></li></ul></div>
+            <!-- Bloco de links de navegação; h3 é um título e ul/li é uma lista de links. -->
+            <div class="footer-links"><h3>Navegação</h3><ul><li><a href="index.html">Início</a></li><li><a href="produto.html">Produtos</a></li><li><a href="contato.html">Contato</a></li></ul></div>
+            <!-- Bloco de contatos: mailto: abre e-mail; tel: inicia uma ligação em dispositivos compatíveis. -->
+            <div class="footer-links"><h3>Contato</h3><ul class="footer-contact"><li><a href="mailto:atendimento@ffdigital.com.br">atendimento@ffdigital.com.br</a></li><li><a href="tel:+5511987654321">(11) 98765-4321</a></li><li><span>Atendimento on-line</span></li></ul></div>
         </div>
+        <!-- Faixa final do rodapé, com informação de direitos autorais. -->
         <div class="footer-bottom"><p>© 2026 FF. Todos os direitos reservados.</p></div>
     </footer>
+    <!-- <script> contém JavaScript que controla o menu e o formulário. -->
     <script>
+        // Encontra os elementos do cabeçalho e do menu no HTML.
         const header = document.querySelector('header');
         const menuToggle = document.querySelector('.menu-toggle');
         const menu = document.querySelector('.menu');
+        // Adiciona ou remove a classe CSS "scrolled" conforme a posição da rolagem.
         function updateHeaderState() { header.classList.toggle('scrolled', window.scrollY > 20); }
+        // No clique do botão, alterna a visibilidade do menu e atualiza seu estado acessível.
         menuToggle.addEventListener('click', () => {
             const isOpen = menu.classList.toggle('open');
             menuToggle.setAttribute('aria-expanded', String(isOpen));
@@ -92,27 +143,38 @@
             menu.classList.remove('open');
             menuToggle.setAttribute('aria-expanded', 'false');
         }));
+        // Atualiza o cabeçalho ao carregar e sempre que a página for rolada.
         updateHeaderState();
         window.addEventListener('scroll', updateHeaderState, { passive: true });
 
+        // Localiza o formulário e lê o parâmetro "assunto" caso ele esteja na URL.
         const contactForm = document.querySelector('#contact-form');
         const assuntoParam = new URLSearchParams(window.location.search).get('assunto')?.slice(0, 100);
+        // Se a URL trouxe um assunto, tenta selecionar uma opção correspondente no menu.
         if (assuntoParam) {
             const assuntoSelect = contactForm.elements.assunto;
             const matchingOption = [...assuntoSelect.options].find((option) => option.value.toLowerCase() === assuntoParam.toLowerCase());
             if (matchingOption) {
+                // A opção já existe: seleciona-a.
                 assuntoSelect.value = matchingOption.value;
             } else {
+                // A opção não existe: cria uma opção com o assunto recebido e a seleciona.
                 assuntoSelect.add(new Option(assuntoParam, assuntoParam, true, true), 1);
             }
         }
+        // Intercepta o envio normal do formulário para preparar uma mensagem de e-mail.
         contactForm.addEventListener('submit', (event) => {
+            // Evita recarregar a página ao enviar o formulário.
             event.preventDefault();
+            // Interrompe o processo se os campos obrigatórios ou formatos não forem válidos.
             if (!contactForm.reportValidity()) return;
+            // FormData reúne os valores digitados nos campos do formulário.
             const data = new FormData(contactForm);
+            // Prepara o assunto e o corpo do e-mail com os dados fornecidos.
             const subject = `[FF] ${data.get('assunto')}`;
             const body = `Nome: ${data.get('nome')}\nE-mail: ${data.get('email')}\n\nMensagem:\n${data.get('mensagem')}`;
-            window.location.href = `mailto:contato@empresa.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            // Abre o aplicativo de e-mail configurado, preenchendo destinatário, assunto e mensagem.
+            window.location.href = `mailto:atendimento@ffdigital.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         });
     </script>
 </body>
